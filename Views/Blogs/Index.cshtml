@@ -1,0 +1,101 @@
+﻿@using SinafProduction.Services
+@model IEnumerable<BlogModel>
+
+@{
+    ViewBag.Title = "Blogs";
+    Layout = "_Layout";
+}
+
+<header>
+    <h1>Blogs</h1>
+    <p>Découvrez ci-dessous, des blogs concernant mes projets et mon aventure dans la programmation !</p>
+</header>
+<main>
+    <form method="get" asp-controller="Blogs" asp-action="Index" class="search-form">
+        <input type="text" name="search" placeholder="Rechercher par nom" value="@ViewBag.search"/>
+        <div>
+            <button type="submit">Rechercher</button>
+            @if (User.IsAdmin())
+            {
+                <a class="button" asp-action="Edit">Créer</a>
+            }
+        </div>
+    </form>
+    @if (ViewBag.nPages == 0)
+    {
+        <p class="alert alert--infos">Malheureusement, aucun blog n'a été trouvé !</p>
+    }
+    else
+    {
+        <ul class="no-style">
+            @foreach (var blog in Model)
+            {
+                <li>
+                    <a class="not-link-effect" asp-action="Blog" asp-route-id="@blog.id">
+                        <div class="blog__vignette">
+                            <img alt="Icône pour @blog.title" src="/blogs/@blog.id/icon.png" onerror="this.src = '/images/no_image.png'" asp-append-version="true"/>
+                            <div>
+                                <p class="blog__infos">
+                                    @if (blog.isPublic)
+                                    {
+                                        <span>@blog.authorName</span>
+                                    }
+                                    else
+                                    {
+                                        <span style="color: red">@blog.authorName</span>
+                                    }
+                                    ·
+                                    <time datetime="@blog.createdAt?.ToString("yyyy-MM-ddTHH:mm:ssZ")">@(blog.createdAt?.ToString("dd/MM/yyyy") ?? "brouillon")</time>
+                                </p>
+                                <div class="blog__content">
+                                    <h3>@blog.title</h3>
+                                    <p>@blog.description</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
+    }
+    <nav class="pagination">
+        <ul>
+            <li>
+                @if (ViewBag.page > 1)
+                {
+                    <a class="button" asp-route-page=@(ViewBag.page - 1) asp-route-search=@ViewBag.search>&lt;</a>
+                }
+                else
+                {
+                    <a class="button button--disable">&lt;</a>
+                }
+            </li>
+            @for (var i = 0; i < ViewBag.nPages; i++)
+            {
+                <li>
+                    @{
+                        var index = i + 1;
+                        if (ViewBag.page == index)
+                        {
+                            <a class="button button--disable">@index</a>
+                        }
+                        else
+                        {
+                            <a class="button" asp-route-page=@index asp-route-search=@ViewBag.search>@index</a>
+                        }
+                    }
+                </li>
+            }
+            <li>
+                @if (ViewBag.page < ViewBag.nPages)
+                {
+                    <a class="button" asp-route-page=@(ViewBag.page + 1) asp-route-search=@ViewBag.search>&gt;</a>
+                }
+                else
+                {
+                    <a class="button button--disable">&gt;</a>
+                }
+            </li>
+        </ul>
+    </nav>
+</main>

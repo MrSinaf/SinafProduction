@@ -1,0 +1,31 @@
+﻿header {
+    margin: 0 10%;
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+main {
+    margin: 0 7%;
+}
+
+#ps {
+    margin-top: 10px;
+    font-size: .9em;
+    color: #b4b4b4;
+    text-align: center;
+}
+
+#politic {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#politic > div {
+    background-color: rgba(0, 0, 0, 0.20);
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 700px;
+    margin: 15px auto;
+}

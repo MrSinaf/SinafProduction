@@ -1,0 +1,14 @@
+﻿main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main > img {
+    height: 300px;
+    margin: 35px auto;
+}

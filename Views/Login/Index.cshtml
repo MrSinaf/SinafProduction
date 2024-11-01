@@ -1,0 +1,39 @@
+﻿@model SinafProduction.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "_Layout";
+}
+
+<main>
+    <p class="alert alert--infos">Pour le moment, les connexions sont réservés aux personnes présentes dans notre whitelist.</p>
+    <h1>Connexion</h1>
+    @if (ViewData.ModelState.ErrorCount > 0)
+    {
+        @foreach (var model in ViewData.ModelState.Values)
+        foreach (var error in model.Errors)
+        {
+            <p class="alert alert--danger">@error.ErrorMessage</p>
+        }
+    }
+    @if (User.Identity is { IsAuthenticated: true })
+    {
+        <div id="disconnect">
+            <p class="alert alert--infos">Vous êtes déjà connecté !</p>
+            <a class="button" asp-action="Logout">Se déconnecter</a>
+        </div>
+    }
+    else
+    {
+        <form asp-controller="Login" asp-action="Index" method="post">
+            @Html.AntiForgeryToken()
+            @if (Model.returnUrl != null)
+            {
+                <input type="hidden" name="returnUrl" value="@Model.returnUrl"/>
+            }
+            <input type="text" id="username" name="username" class="form-control" value="@Model.username" placeholder="Nom d'utilisateur" required/>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe" required/>
+            <button type="submit">Se connecter</button>
+        </form>
+    }
+</main>

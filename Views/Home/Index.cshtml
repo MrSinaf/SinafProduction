@@ -1,0 +1,130 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<BlogModel>;
+@{
+    ViewBag.Title = "Accueil";
+    Layout = "_Layout";
+}
+
+
+@section Head
+{
+    <link rel="stylesheet" href="/css/home/index--preview.css" asp-append-version="true"/>
+}
+
+@section NavAbove {
+    <header>
+        <h1>Mickaël Dancoisne</h1>
+        <p class="mark">Développeur web & application C# .Net</p>
+    </header>
+}
+
+<main>
+    <section id="who-im">
+        <div id="who-im__left-panel">
+            <h2>Salutations !</h2>
+            <p>
+                Je m'appelle Mickaël, âgé de @($"{DateTime.UtcNow.Subtract(new DateTime(2001, 04, 25)).Days / 365}") ans, je suis un grand passionné, spécialisé dans la
+                programmation en C#.
+            </p>
+            <p>Je suis quelqu'un d'ambitieux et de déterminé autant dans mes objectifs que dans mon apprentissage !</p>
+            <p>
+                En tant que développeur indépendant et autodidacte, je travaille principalement seul. Mais j'aime tout de même le travail en équipe et, si possible,
+                partager les connaissances que j'ai acquises grâce à mes années d'expériences dans le domaine.
+            </p>
+            <div>
+                <a href="https://www.linkedin.com/in/mickael-dancoisne/" target="_blank">
+                    <img src="/images/svg/logo_linkedin.svg" alt="logo linkedin"/>
+                </a>
+                <a href="https://github.com/MrSinaf" target="_blank">
+                    <img src="/images/svg/logo_github.svg" alt="logo github"/>
+                </a>
+                <a href="mailto:mrsinaf.production@gmail.com">
+                    <img src="/images/svg/logo_mail.svg" alt="logo mail"/>
+                </a>
+                <a class="button" href="CV.pdf" download="CV - Mickaël Dancoisne">Mon CV</a>
+            </div>
+        </div>
+        <div id="who-im__right-panel">
+            <img src="/images/avatar_sinaf.png" alt="Un poney vert, utilisé pour me représenter"/>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Mes compétences</h2>
+        <p></p>
+        <div id="skills__logos">
+            <img id="csharp" src="/images/svg/logo_csharp.svg" onclick="onLogoClick(this)" alt="logo csharp"/>
+            <img id="html" src="/images/svg/logo_html.svg" onclick="onLogoClick(this)" alt="logo html"/>
+            <img id="css" src="/images/svg/logo_css.svg" onclick="onLogoClick(this)" alt="logo css"/>
+            <img id="js" src="/images/svg/logo_js.svg" onclick="onLogoClick(this)" alt="logo js"/>
+            <img id="mysql" src="/images/svg/logo_mysql.svg" onclick="onLogoClick(this)" alt="logo mysql"/>
+            <div></div>
+            <img id="unity" src="/images/svg/logo_unity.svg" onclick="onLogoClick(this)" alt="logo unity"/>
+            <img id="silk" src="/images/svg/logo_silk.svg" onclick="onLogoClick(this)" alt="logo silk.net"/>
+            <img id="jetbrains" src="/images/svg/logo_jetbrains.svg" onclick="onLogoClick(this)" alt="logo jetbrains"/>
+            <img id="discord" src="/images/svg/logo_discord.svg" onclick="onLogoClick(this)" alt="logo discord"/>
+            <img id="aseprite" src="/images/svg/logo_aseprite.svg" onclick="onLogoClick(this)" alt="logo aseprite"/>
+        </div>
+        <div id="skills__description">
+            @{
+                <div id="skills__description-labels">
+                    <h3></h3>
+                    <p></p>
+                    <p></p>
+                </div>
+            }
+        </div>
+    </section>
+    <section id="news">
+        <h2>Mes projets notables</h2>
+        <div id="project__container">
+            <div class="news-item">
+                <div class="news-item__title">
+                    <h3>Minesweeper BASIC</h3>
+                    <p>SPEngine / MonoGame</p>
+                </div>
+                <a href="https://github.com/MrSinaf/MinesweeperBasic" target="_blank">
+                    <div class="news-item__content">
+                        <img src="/images/projects/MinesweeperBasic.png" alt="Minesweeper Basic">
+                    </div>
+                </a>
+            </div>
+            <div class="news-item project-item--progress">
+                <div class="news-item__title">
+                    <h3>XYEngine</h3>
+                    <p>Silk.NET</p>
+                </div>
+                <div class="news-item__content">
+                    <img src="/images/projects/XYEngine.png" alt="SPEngine">
+                </div>
+            </div>
+        </div>
+        <h2>Mes derniers blogs</h2>
+        <div id="blogs__container">
+            @{
+                foreach (var blog in Model)
+                {
+                    <div class="news-item">
+                        <div class="news-item__title">
+                            <h3>@blog.title</h3>
+                        </div>
+                        <a href="/blogs/@blog.id">
+                            <div class="news-item__content">
+                                <img src="/blogs/@blog.id/icon.png" alt="@blog.title">
+                                <div>
+                                    <p>Par <b>@blog.authorName</b></p>
+                                    <p>@blog.description</p>
+                                    <time datetime="@blog.createdAt?.ToString("yyyy-MM-ddTHH:mm:ssZ")">Publié le @blog.createdAt?.ToString("dd/MM/yyyy")</time>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+    </section>
+</main>
+
+@section Scripts
+{
+    <script src="/js/home.js" asp-append-version="true"></script>
+}

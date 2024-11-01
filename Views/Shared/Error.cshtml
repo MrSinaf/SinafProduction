@@ -1,0 +1,17 @@
+﻿@model ErrorModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = $"Error {ViewData["StatusCode"]}";
+}
+
+<main>
+    <img src="/images/oh_no_sad_thing_green.png" alt="Une jolie petite chose triste..."/>
+    <h1>@ViewData["Title"]</h1>
+    <h2 class="text-danger">
+        @(ViewData["StatusCode"] switch
+        {
+        404 => "La page est introuvable",
+        _ => "Une erreur est survenue."
+        })
+    </h2>
+</main>

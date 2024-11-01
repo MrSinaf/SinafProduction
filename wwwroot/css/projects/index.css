@@ -1,0 +1,60 @@
+﻿header {
+    margin: auto;
+    width: 70%;
+}
+
+header h1 {
+    margin-left: 20px
+}
+
+main {
+    margin: 30px auto;
+    max-width: 80%;
+}
+
+hr {
+    margin: 20px auto;
+}
+
+.project {
+    display: flex;
+}
+
+.project > div {
+    margin-right: 10px;
+}
+
+.project img {
+    border-radius: 15px;
+    max-width: 50%;
+    height: 100%;
+}
+
+.project--progress::after {
+    content: "En cours";
+    color: cyan;
+}
+
+.project--beta::after {
+    content: "Bêta";
+    color: #c566f5;
+}
+
+.project--old::after {
+    content: "Ancien";
+    color: #c7d24c;
+}
+
+
+@media (max-width: 900px) {
+
+    .project {
+        flex-direction: column-reverse;
+    }
+    
+    .project img {
+         border-radius: 15px;
+         max-width: 100%;
+         height: 100%;
+     }
+}

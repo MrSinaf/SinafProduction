@@ -1,0 +1,14 @@
+﻿@model ProfilModel
+
+@{
+    ViewBag.Title = Model.username;
+    Layout = "_Layout";
+
+    
+}
+
+<header>
+    <h1>@Model.username</h1>
+    <img src="@Model.avatar" alt="Avatar du profil discord"/>
+    <p>Je ne sais pas trop quoi en faire...</p>
+</header>

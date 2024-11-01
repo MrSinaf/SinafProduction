@@ -1,0 +1,9 @@
+﻿@using SinafProduction.Services
+@{
+    ViewData["Title"] = User.GetName();
+    Layout = "_Layout";
+}
+
+<main>
+    <a asp-controller="Login" asp-action="Logout">Se déconnecter</a>
+</main>

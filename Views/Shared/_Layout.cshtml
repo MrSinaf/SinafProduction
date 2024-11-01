@@ -1,0 +1,55 @@
+﻿@using SinafProduction.Services
+@{
+    var actionName = ViewContext.RouteData.Values["action"]?.ToString()!.ToLower();
+    var controllerName = ViewContext.RouteData.Values["controller"]?.ToString()!.ToLower();
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] > Sinaf Production</title>
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    @await RenderSectionAsync("HeadTop", required: false)
+    <link rel="stylesheet" href="/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="/css/@(controllerName)/@(actionName).css" asp-append-version="true"/>
+    @await RenderSectionAsync("Head", required: false)
+</head>
+<body>
+@await RenderSectionAsync("NavAbove", required: false)
+<nav id="nav">
+    <button id="nav-button" onclick="navButtonClick()"></button>
+    <ul>
+        <li>
+            <a class="nav-link" onclick="showPresentation()" asp-controller="Home" asp-action="Index" asp-fragment="show">Présentation</a>
+        </li>
+        <li>
+            <a class="nav-link" asp-controller="Projects" asp-action="Index">Projets</a>
+        </li>
+        <li>
+            <a class="nav-link" asp-controller="Blogs" asp-action="Index">Blogs</a>
+        </li>
+        <li>
+            <a class="nav-link" asp-controller="Home" asp-action="About">A propos</a>
+        </li>
+        <li class="user">
+            @if (User.Identity is { IsAuthenticated: true })
+            {
+                <a class="nav-link" asp-action="Index" asp-controller="User">@User.GetName()</a>
+            }
+            else
+            {
+                <a class="nav-link" asp-action="Index" asp-controller="Login">Se connecter</a>
+            }
+        </li>
+    </ul>
+</nav>
+@RenderBody()
+<footer>
+    &copy;Sinaf Production - @DateTime.UtcNow.Year
+</footer>
+<script src="/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿@model PussInBotModel;
+
+@{
+    ViewData["Title"] = "Puss In Bot";
+    Layout = "_Layout";
+}
+
+<header>
+    <img src="/images/projects/pussinbot/avatar.png" alt="Emote du bot puss in bot"/>
+    <h1>Puss In Bot</h1>
+    <p>
+        <span class="accent">@Model.nServeur</span> serveurs l'ont déjà adopté !
+    </p>
+    <a class="button" href="https://discord.com/oauth2/authorize?client_id=1061586852584378418" target="_blank">Adopter</a>
+</header>
+<main>
+    <section id="why">
+        <h2>Pourquoi l'adopter ?</h2>
+        <p>Il est <span class="accent">mignon</span>.</p><br/>
+        <p>
+            Bon... Et c'est aussi un bot en <span class="accent">développement actif</span> et <span class="accent">100% gratuit</span>.<br/>
+            Il vous permet donc de participer à son développement et de proposer vos idées pour le rendre encore plus exceptionnel !
+        </p>
+        <p>
+            Il est pensé pour être à la fois utilitaire pour la modération, mais aussi pour donner un intérêt aux utilisateurs d'être <span class="accent">actif</span>
+            sur votre serveur grâce à une économie virtuelle !<br/>
+            Son style unique et conviviale, vous permettra d'avoir un peu plus de guêtté à offrir à vos membres.
+        </p>
+    </section>
+    <section id="after">
+        <h2>Et après ?</h2>
+        <p>
+            Comme beaucoup de projet de ce genre, les ambitions sont grandes et peuvent prendre un certain temps avant d'aboutir à de réels résultats.
+            <img class="emote" src="https://cdn.discordapp.com/emojis/1271322896203120682.png" alt="sorry emote"/>
+        </p>
+        <p>
+            Pour le moment, la plupart des resources sont déployés sur le développement d'un <span class="accent">Dashboard</span>, vous permettant de gérer
+            efficacement le bot sur une interface web.<br/>
+            Après cette intégration, <span class="accent">Puss In Bot</span> aura tout ce qui lui faut pour développer les meilleures idées !
+        </p>
+        <p>
+            Mais il y a aussi un travail, pour savoir quoi faire précisément de l'économie virtuelle du bot.<br/>
+            La grande question est : Quel genre de dépenses pouvons-nous réaliser avec l'argent gagné ?
+        </p>
+    </section>
+    <div id="last-button">
+        <a class="button" href="https://discord.com/oauth2/authorize?client_id=1061586852584378418" target="_blank">Adopter</a>
+    </div>
+    <div id="emotes-defile"></div>
+</main>
