@@ -1,0 +1,18 @@
+﻿body {
+    grid-template-rows: auto 1fr;
+    background: url("../../images/spattern.jpg") var(--background-color) ;
+    background-blend-mode: multiply;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+p {
+    margin: 10px;
+}

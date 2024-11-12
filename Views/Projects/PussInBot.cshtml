@@ -1,6 +1,4 @@
-﻿@model PussInBotModel;
-
-@{
+﻿@{
     ViewData["Title"] = "Puss In Bot";
     Layout = "_Layout";
 }
@@ -9,7 +7,7 @@
     <img src="/images/projects/pussinbot/avatar.png" alt="Emote du bot puss in bot"/>
     <h1>Puss In Bot</h1>
     <p>
-        <span class="accent">@Model.nServeur</span> serveurs l'ont déjà adopté !
+        <span class="accent">@ViewBag.nServer</span> serveurs l'ont déjà adopté !
     </p>
     <a class="button" href="https://discord.com/oauth2/authorize?client_id=1061586852584378418" target="_blank">Adopter</a>
 </header>
@@ -34,13 +32,8 @@
             <img class="emote" src="https://cdn.discordapp.com/emojis/1271322896203120682.png" alt="sorry emote"/>
         </p>
         <p>
-            Pour le moment, la plupart des resources sont déployés sur le développement d'un <span class="accent">Dashboard</span>, vous permettant de gérer
-            efficacement le bot sur une interface web.<br/>
-            Après cette intégration, <span class="accent">Puss In Bot</span> aura tout ce qui lui faut pour développer les meilleures idées !
-        </p>
-        <p>
-            Mais il y a aussi un travail, pour savoir quoi faire précisément de l'économie virtuelle du bot.<br/>
-            La grande question est : Quel genre de dépenses pouvons-nous réaliser avec l'argent gagné ?
+            C'est aussi avant tout un projet secondaire, il n'est en aucun cas ma priorité. En vérité, le temps que je compte lui consacrer dépendra de l'intérêt que vous
+            lui porterez. Ce qui est tout de même intéressant, c'est de pouvoir me demander directement une fonctionnalité qui serait à vos yeux un ajout utile !
         </p>
     </section>
     <div id="last-button">

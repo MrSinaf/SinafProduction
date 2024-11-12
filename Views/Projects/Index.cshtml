@@ -4,92 +4,47 @@
 }
 <header>
     <h1>Mes projets</h1>
-    <p>Une petite liste regroupant quelques projets que j'ai pu réaliser durant mon parcours dans le domaine de la programmation.</p>
+    <p>Découvrez ci-dessous, la liste de mes différents projets que j'ai pu réaliser durant mon parcours dans le domaine de la programmation.</p>
 </header>
 <main>
     <div class="project">
-        <div>
-            <h2>XY Engine</h2>
-            <p>Un moteur de jeu 2D, sans très grande prétention, me permettant de créer le cœur même d'un jeu vidéo.</p>
-            <p>Il me permet d'en apprendre beaucoup tout en créant un moteur de toute pièce suffisamment solide et complet pour divers projets !</p>
-            <div>
-                <a class="button" href="https://github.com/MrSinaf/XYEngine" target="_blank">Github</a>
-                <a class="button" asp-controller="Blogs" asp-action="Blog" asp-route-id="104547462">Blog</a>
-            </div>
+        <h2>XY Engine</h2>
+        <img src="/images/projects/XYEngine.png" alt="Vignette du projet" asp-append-version="true"/>
+        <div class="project__links">
+            <a class="button" asp-action="XYEngine">Découvrir</a>
+            <p style="background: rgb(0,75,0)">Moteur de jeux</p>
         </div>
-        <img src="/images/projects/XYEngine.png" alt="Vignette du projet"/>
     </div>
-    <hr/>
     <div class="project">
-        <div>
-            <h2>Puss In Bot</h2>
-            <p>
-                Un bot pour discord, permettant de faire quelques commandes administratives, gérer des tickets, vérifier les messages des utilisateurs,
-                voir quelques statistiques de son profil et bien plus... (En sachant, que j'arrive aisément à copier quelques fonctionnalités de certain bot.)
-            </p>
-            <p>Entièrement créé en C# et MySQL pour le stockage, il est tout simplement le bot que je vise à être le plus avancé que j'ai pu faire !</p>
-            <div>
-                <a class="button" asp-controller="PussInBot">Découvrir</a>
-            </div>
+        <h2>Puss In Bot</h2>
+        <img src="/images/projects/PussInBot.png" alt="Vignette du projet" asp-append-version="true"/>
+        <div class="project__links">
+            <a class="button" asp-action="PussInBot">Découvrir</a>
+            <p style="background: rgb(0,50,105)">bot discord</p>
         </div>
-        <img src="/images/projects/PussInBot.png" alt="Vignette du projet"/>
     </div>
-    <hr/>
     <div class="project">
-        <div>
-            <h2>Data Base CDF</h2>
-            <p>
-                Un projet réalisé en ASP.NET MVC venant d'une demande dans un serveur discord, son souhait était d'avoir un site web complémentaire pour le jeu vidéo
-                StarCitizen.
-            </p>
-            <p>
-                L'objectif est d'avoir une sorte de base de donnée policière regroupant toutes les personnes fiables ou non, selon un casier judiciaire. Ainsi, un unique
-                site centralise toutes les informations utiles à une organisation fictive : CDF.
-            </p>
-            <p>
-                <em>Le site étant utilisé, il n'est malheureusement pas possible de le parcourir à moins d'y être membre.</em>
-            </p>
-            <div>
-                <a class="button" href="https://cdf-panel.com" target="_blank">Découvrir</a>
-                <a class="button" href="https://github.com/MrSinaf/DataBaseCDF" target="_blank">Github</a>
-            </div>
+        <h2>Civilian Defense Force</h2>
+        <img src="/images/projects/CDF.png" alt="Vignette du projet" asp-append-version="true"/>
+        <div class="project__links">
+            <a class="button" asp-action="CDF">Découvrir</a>
+            <p style="background: rgb(85,0,143)">Site web</p>
         </div>
-        <img src="/images/projects/DataBaseCDF.png" alt="Vignette du projet"/>
     </div>
-    <hr/>
     <div class="project">
-        <div>
-            <h2>Minesweeper Basic</h2>
-            <p>Un démineur très simpliste créé avant tout pour tester les fonctionnalités de mon propre moteur de jeu SPEngine.</p>
-            <p>
-                Bien qu'il soit un simple jeu, il n'en est pas moins complet, avec un choix de difficulté offrant des maps et un nombre de bombes variables, ainsi qu'un
-                compteur et des points de vies pour convenir à tous les joueurs.
-            </p>
-            <p>
-                <em>Le projet est maintenant archivé, je n'y apporterais aucune mise à jour, car SPEngine a été abandonné pour XYEngine.</em>
-            </p>
-            <div>
-                <a class="button" href="https://github.com/MrSinaf/MinesweeperBasic" target="_blank">Github</a>
-                <a class="button" href="https://github.com/MrSinaf/MinesweeperBasic/releases/download/v1.0.0/MinesweeperBasic.rar">Télécharger</a>
-            </div>
+        <h2>Minesweeper Basic</h2>
+        <img src="/images/projects/MinesweeperBasic.png" alt="Vignette du projet" asp-append-version="true"/>
+        <div class="project__links">
+            <a class="button" asp-action="MinesweeperBasic">Découvrir</a>
+            <p style="background: rgb(0,54,0)">Jeu vidéo</p>
         </div>
-        <img src="/images/projects/MinesweeperBasic.png" alt="Vignette du projet"/>
     </div>
-    <hr/>
     <div class="project">
-        <div>
-            <h2>Snake JS</h2>
-            <p>
-                Pour un projet durant une petite formation JS, nous devions faire un jeu snake. Mais l'ayant fini bien plus tôt que les autres (ayant déjà une belle
-                avance sur le fonctionnement d'un jeu grâce à Unity), j'ai pu perfectionner ce petit jeu.
-            </p>
-            <p>
-                En plus d'avoir de simples animations, il y a aussi un petit pathfinding A* d'intégré !
-            </p>
-            <div>
-                <a class="button" asp-action="SnakeJS">Découvrir</a>
-            </div>
+        <h2>Snake JS</h2>
+        <img src="/images/projects/SnakeJS.png" alt="Vignette du projet"/>
+        <div class="project__links">
+            <a class="button" asp-action="SnakeJS">Découvrir</a>
+            <p style="background: rgb(0,54,0)">Jeu vidéo</p>
         </div>
-        <img src="/images/projects/Snake.png" alt="Vignette du projet"/>
     </div>
 </main>

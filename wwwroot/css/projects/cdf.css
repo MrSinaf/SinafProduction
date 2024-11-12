@@ -1,0 +1,103 @@
+﻿html {
+    --primary-color: #59653F;
+}
+
+header {
+    position: relative;
+    height: 300px;
+    background: url("../../images/projects/cdf/background.png") center fixed no-repeat;
+    background-size: cover;
+}
+
+header > div {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 20px 10px;
+    margin: 0;
+    width: fit-content;
+}
+
+header h1 {
+    font-size: 45px;
+    margin: 0 0 10px 30px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+    margin: 0 10px 0 45px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+#description {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#security {
+    background: url("../../images/projects/cdf/background.png") center fixed no-repeat;
+    background-size: cover;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 0 10%;
+}
+
+#security > div {
+    flex: 1;
+    margin-right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+}
+
+#security h2 {
+    margin: 0;
+}
+
+#security > div > p {
+    margin: 10px;
+}
+
+#security > img {
+    width: 100%;
+    max-width: 850px;
+}
+
+#list {
+    margin: 0 20%;
+}
+
+#list > img {
+    width: 100%;
+}
+
+#conclusion {
+    background: url("../../images/projects/cdf/background.png") center fixed no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+#conclusion > p {
+    text-align: center;
+    padding: 5px 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 1550px){
+    #security {
+        flex-direction: column;
+    }
+    
+    #security > img {
+        margin: 10px auto 0 auto;
+    }
+}
+
+@media (max-width: 750px) {
+    #security {
+        margin: 0;
+    }
+    #list {
+        margin: 0 30px;
+    }
+}

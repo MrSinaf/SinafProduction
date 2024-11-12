@@ -77,25 +77,27 @@
     <section id="news">
         <h2>Mes projets notables</h2>
         <div id="project__container">
-            <div class="news-item">
-                <div class="news-item__title">
-                    <h3>Minesweeper BASIC</h3>
-                    <p>SPEngine / MonoGame</p>
-                </div>
-                <a href="https://github.com/MrSinaf/MinesweeperBasic" target="_blank">
-                    <div class="news-item__content">
-                        <img src="/images/projects/MinesweeperBasic.png" alt="Minesweeper Basic">
-                    </div>
-                </a>
-            </div>
             <div class="news-item project-item--progress">
                 <div class="news-item__title">
                     <h3>XYEngine</h3>
                     <p>Silk.NET</p>
                 </div>
-                <div class="news-item__content">
-                    <img src="/images/projects/XYEngine.png" alt="SPEngine">
+                <a asp-controller="Projects" asp-action="XYEngine">
+                    <div class="news-item__content">
+                        <img src="/images/star_project_1.png" alt="SPEngine" asp-append-version="true">
+                    </div>
+                </a>
+            </div>
+            <div class="news-item">
+                <div class="news-item__title">
+                    <h3>Minesweeper BASIC</h3>
+                    <p>SPEngine / MonoGame</p>
                 </div>
+                <a asp-controller="Projects" asp-action="MinesweeperBasic">
+                    <div class="news-item__content">
+                        <img src="/images/star_project_2.png" alt="Minesweeper Basic" asp-append-version="true">
+                    </div>
+                </a>
             </div>
         </div>
         <h2>Mes derniers blogs</h2>
