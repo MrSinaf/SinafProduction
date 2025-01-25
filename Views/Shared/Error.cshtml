@@ -10,8 +10,8 @@
     <h2 class="text-danger">
         @(ViewData["StatusCode"] switch
         {
-        404 => "La page est introuvable",
-        _ => "Une erreur est survenue."
+            404 => "La page est introuvable",
+            _   => "Une erreur est survenue."
         })
     </h2>
 </main>

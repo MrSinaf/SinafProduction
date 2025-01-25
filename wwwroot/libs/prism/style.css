@@ -160,7 +160,7 @@ div.code-toolbar > .toolbar > .toolbar-item > a:focus, div.code-toolbar > .toolb
     text-decoration: none
 }
 
-@media (max-width: 550px){
+@media (max-width: 550px) {
     code[class*=language-], pre[class*=language-] {
         font-size: 11px;
     }

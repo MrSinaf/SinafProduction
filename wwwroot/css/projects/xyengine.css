@@ -1,6 +1,6 @@
 ﻿body {
     grid-template-rows: auto 1fr;
-    background: url("../../images/spattern.jpg") var(--background-color) ;
+    background: url("../../images/spattern.jpg") rgba(0, 0, 0, 0.7);
     background-blend-mode: multiply;
 }
 

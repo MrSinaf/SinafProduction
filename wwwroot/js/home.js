@@ -20,7 +20,7 @@ function showPresentation() {
     nav.classList.toggle("nav--open", false);
     document.body.classList.add("presentation");
     main.style.display = "block";
-    
+
     setTimeout(() => {
         onLogoClick(document.querySelector("#skills__logos > :first-child"));
         adjustHeightProjects();

@@ -33,7 +33,7 @@
                 <li>
                     <a class="not-link-effect" asp-action="Blog" asp-route-id="@blog.id">
                         <div class="blog__vignette">
-                            <img alt="Icône pour @blog.title" src="/blogs/@blog.id/icon.png" onerror="this.src = '/images/no_image.png'" asp-append-version="true"/>
+                            <img alt="Icône pour @blog.title" src="/blogs/@ blog.id/icon.png" onerror="this.src = '/images/no_image.png'" asp-append-version="true"/>
                             <div>
                                 <p class="blog__infos">
                                     @if (blog.isPublic)
@@ -83,6 +83,7 @@
                         {
                             <a class="button" asp-route-page=@index asp-route-search=@ViewBag.search>@index</a>
                         }
+
                     }
                 </li>
             }

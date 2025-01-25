@@ -83,11 +83,11 @@ header p {
     background: rgba(0, 0, 0, 0.8);
 }
 
-@media (max-width: 1550px){
+@media (max-width: 1550px) {
     #security {
         flex-direction: column;
     }
-    
+
     #security > img {
         margin: 10px auto 0 auto;
     }
@@ -97,6 +97,7 @@ header p {
     #security {
         margin: 0;
     }
+
     #list {
         margin: 0 30px;
     }

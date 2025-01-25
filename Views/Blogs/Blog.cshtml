@@ -18,7 +18,9 @@
     <img src="/blogs/@Model.id/icon.png" onerror="this.src = '/images/no_image.png'" alt="icône du blog @Model.title"/>
 </header>
 <main>
-    <p>@Model.authorName, le <time datetime="@Model.createdAt?.ToString("yyyy-MM-ddTHH:mm:ssZ")">@(Model.createdAt?.ToString("dd/MM/yyyy") ?? "(brouillon)")</time></p>
+    <p>@Model.authorName, le
+        <time datetime="@Model.createdAt?.ToString("yyyy-MM-ddTHH:mm:ssZ")">@(Model.createdAt?.ToString("dd/MM/yyyy") ?? "(brouillon)")</time>
+    </p>
     <section id="content">
         @Html.Raw(Markdown.ToHtml(Model.content!, new MarkdownPipelineBuilder().UseAdvancedExtensions().Build()))
     </section>

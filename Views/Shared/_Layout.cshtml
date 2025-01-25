@@ -11,13 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] > Sinaf Production</title>
     <link rel="icon" href="/favicon.png" type="image/x-icon">
-    @await RenderSectionAsync("HeadTop", required: false)
+    @await RenderSectionAsync("HeadTop", false)
     <link rel="stylesheet" href="/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="/css/@(controllerName)/@(actionName).css" asp-append-version="true"/>
-    @await RenderSectionAsync("Head", required: false)
+    @await RenderSectionAsync("Head", false)
 </head>
 <body>
-@await RenderSectionAsync("NavAbove", required: false)
+@await RenderSectionAsync("NavAbove", false)
 <nav id="nav">
     <button id="nav-button" onclick="navButtonClick()"></button>
     <ul>
@@ -50,6 +50,6 @@
     &copy;Sinaf Production - @DateTime.UtcNow.Year
 </footer>
 <script src="/js/site.js" asp-append-version="true"></script>
-@await RenderSectionAsync("Scripts", required: false)
+@await RenderSectionAsync("Scripts", false)
 </body>
 </html>

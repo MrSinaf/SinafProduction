@@ -82,11 +82,6 @@ nav:hover #discover {
     animation: pendulum 1s infinite linear;
 }
 
-#who-im__left-panel a:last-child {
-    position: absolute;
-    right: 0;
-}
-
 #skills {
     position: relative;
     background-color: #1e1e27;

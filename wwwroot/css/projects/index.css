@@ -103,7 +103,7 @@ main {
     width: fit-content;
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
     .project {
         width: 100%;
     }
@@ -113,7 +113,7 @@ main {
     }
 }
 
-@media (max-width: 550px){
+@media (max-width: 550px) {
     .project__links > p {
         padding: 7px;
     }

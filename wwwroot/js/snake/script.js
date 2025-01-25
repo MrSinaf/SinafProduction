@@ -121,7 +121,7 @@ function move() {
             for (let x = 0; x < gridWidth; x++) {
                 let tile = grid[positionToIndex(x, y)];
                 message2 += path.includes(tile) ? "🟩" : openList.includes(tile) ? "🟪" :
-                    closeList.includes(tile) ? "🟥": "⬛";
+                    closeList.includes(tile) ? "🟥" : "⬛";
             }
             message2 += "<br>";
         }
@@ -203,7 +203,7 @@ function addBody(count = 1) {
 function updatePosition(target, rotate = 0) {
     const tile = grid[target.tileId];
     target.style.transform = `translate(${tile.position.x * tileWidth}px, ${tile.position.y * tileWidth}px)`;
-    
+
     if (rotate)
         target.style.transform += ` rotate(${rotate}deg)`;
 }

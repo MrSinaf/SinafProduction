@@ -78,7 +78,7 @@ function pathfinding(start, target) {
 
     if (path === start)
         loose();
-    
+
     return [path];
 }
 
