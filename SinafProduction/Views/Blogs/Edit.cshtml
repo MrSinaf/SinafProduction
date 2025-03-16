@@ -1,0 +1,66 @@
+﻿@using SinafProduction.Services
+@model SinafProduction.Data.Entities.Blog
+@{
+    ViewBag.Title = "Blog édition";
+    Layout = "_Layout";
+}
+
+@section HeadTop
+{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/markdown/markdown.min.js"></script>
+}
+
+<main>
+    <header>
+        <h1>@User.GetName()</h1>
+        <p>@Model.id.ToString("000 000 000")</p>
+    </header>
+    @if (ViewBag.error != null)
+    {
+        <p class="alert alert--danger">@ViewBag.error</p>
+    }
+
+    <form asp-controller="Blogs" asp-action="Edit" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <input type="hidden" id="id" name="id" value="@Model.id"/>
+        <input type="text" id="title" name="title" autocomplete="off" class="form-control" placeholder="Titre" value="@Model.title" maxlength="60" required/>
+        <textarea id="description" name="description" autocomplete="off" placeholder="Description..." maxlength="180" rows="2" required>@Model.description</textarea>
+        <textarea id="content" name="content" autocomplete="off" placeholder="Contenu..." rows="20">@Model.content</textarea>
+        <div id="images">
+            <div class="input-image">
+                <label id="icon" for="icon-input" class="input-image__preview">
+                    <img src=@($"/blogs/{Model.id}/icon.png") alt="Icône" accept="image/*" asp-append-version="true"/>
+                    <button type="button" class="input-image__preview__button-close" onclick="clearIcon()">X</button>
+                    <input type="file" id="icon-input" name="icon"/>
+                </label>
+            </div>
+            <ul id="image-list" class="no-style">
+                <li class="input-image">
+                    <label for="image">
+                        <input type="file" id="image" accept="image/*"/>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div id="buttons">
+            <label for="isPublic" class="checkbox-label">
+                Publique
+                <input type="checkbox" id="isPublic" name="isPublic" value="true" @(Model.isPublic ? "checked" : "")/>
+            </label>
+            <button type="submit">Envoyer</button>
+        </div>
+    </form>
+</main>
+
+@section Scripts
+{
+    <script src="/js/editBlog.js" asp-append-version="true"></script>
+    <script>
+        CodeMirror.fromTextArea(document.getElementById("content"), {
+            mode: "markdown",
+            lineWrapping: true
+        });
+    </script>
+}

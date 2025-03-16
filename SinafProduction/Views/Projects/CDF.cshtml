@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "CDF";
+}
+
+@section NavAbove
+{
+    <header>
+        <div>
+            <h1>Civilian Defense Force</h1>
+            <p>Organisez, surveillez et maitrisez les informations sur les criminels dans l'univers de Star Citizen.</p>
+        </div>
+    </header>
+}
+
+<main>
+    <section id="description">
+        <h2>Description</h2>
+        <p>
+            Ce projet a été réaliser pour une personne souhaitant un endroit pour son organisation "CDF", permettant de centraliser et structurer toutes informations essentielles
+            sur les individus présents dans le jeu Star Citizen. Grâce à une interface conviviale, les utilisateurs peuvent ajouter, modifier et visualiser des profils de personnes
+            d'intérêts, qu'elles soient alliées, neutres ou ennemies.
+        </p>
+        <p>
+            Le site a été entièrement développé en ASP.NET par moi-même, du front au back !
+        </p>
+    </section>
+    <hr/>
+    <section id="security">
+        <div>
+            <h2>Sécurité</h2>
+            <p>
+                L'accès aux données est réservés exclusivement aux membres de la CDF, assurant que les informations stratégiques ne sont visibles que par les personnes de
+                confiance.
+            </p>
+            <p>
+                Un administrateur (rôle à désigner) peut apporter des modifications sur les dossiers de chacun des individus, ajoutant un niveau de contrôle supplémentaire pour
+                préserver l'intégrité des informations et éviter toute manipulation non autorisée.
+            </p>
+            <p>Ces actions permettent de garantir une base de données fiable et à jour, essentielle pour les prises de décision stratégiques.</p>
+        </div>
+        <img src="/images/projects/cdf/page_connexion.png" alt="Page de connexion de la CDF" asp-append-version="true"/>
+    </section>
+    <hr/>
+    <section id="list">
+        <h2>La liste des utilisateurs</h2>
+        <p>Tous les utilisateurs peuvent être consultés via une liste regroupant chaque individu en donnant les informations clés et un bouton amenant à de chacun d'entre eux.</p>
+        <p></p>
+        <img src="/images/projects/cdf/page_list.png" alt="Page de la liste des utilisateurs" asp-append-version="true"/>
+    </section>
+    <section id="conclusion">
+        <p>
+            Le site est disponible ici : <a href="https://civilian-defense-force.fr" target="_blank">https://civilian-defense-force.fr</a>, il reste tout de même limité aux
+            membres.<br/>Le code source est disponible publiquement sur <a href="https://github.com/MrSinaf/CivilianDefenseForceDB" target="_blank">Github</a>.
+        </p>
+    </section>
+</main>

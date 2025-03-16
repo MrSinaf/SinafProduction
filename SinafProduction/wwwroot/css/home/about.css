@@ -1,0 +1,53 @@
+﻿header {
+    margin: 0 10%;
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+main {
+    margin: 0 7%;
+}
+
+#contact ul {
+    display: flex;
+    margin: auto;
+    padding: 0;
+}
+
+#contact .button {
+    display: flex;
+    margin: 10px;
+}
+
+#contact .button > p {
+    margin: auto 5px;
+}
+
+#contact .button > img {
+    width: 32px;
+}
+
+hr {
+    margin: 20px auto;
+}
+
+#politic {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#politic > div {
+    background-color: rgba(0, 0, 0, 0.20);
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+@media (max-width: 600px) {
+    #contact ul {
+        flex-direction: column;
+    }
+}

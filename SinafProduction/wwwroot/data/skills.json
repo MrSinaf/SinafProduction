@@ -1,0 +1,62 @@
+﻿[
+  {
+    "id": "csharp",
+    "name": "Langage : C#",
+    "description": "Le C# est mon langage de prédilection, je l'utilise dans tous mes projets, que ce soit pour un jeu, un bot intéractif pour Discord, une API ou un site Web ergonomique. Le C# est finalement mon arme secrète !",
+    "infos": "Je programme en POO, avec des connaissances en multithreading, .Net 6+, ASP.NET MVC, Unity et très récemment le développement d'application de très bas niveau !"
+  },
+  {
+    "id": "html",
+    "name": "Langage : HTML",
+    "description": "Le HTML est un langage assez simple et qui ne demande qu'à suivre les bonnes pratiques. Il est donc normal que je ne néglige pas les nouveautés et que je sois naturellement à l'aise pour son utilisation.",
+    "infos": "Je suis les bonnes pratiques et cherche à toujours rendre mon code lisible et agréable à lire, même sur de grands projets."
+  },
+  {
+    "id": "css",
+    "name": "Langage : CSS",
+    "description": "Le CSS est une suite logique à l'utilisation du HTML, c'est un langage que je trouve tout aussi simple, bien qu'il demande un peu plus d'effort pour réaliser un design complexe et qui peut tenir sur la durée. Il est tout de même pour moi un langage que je pense maîtriser !",
+    "infos": "A l'aise avec les flexbox, les grids et les sélecteurs, j'ai aussi une certaine aisance avec la convention BEM (Block Element Modifier)."
+  },
+  {
+    "id": "js",
+    "name": "Langage : JavaScript",
+    "description": "Le JavaScript n'est pas un langage que j'apprécie énormément (étant tout le contraire avec la POO et le typage du C#), mais il n'en reste pas moins un langage que je maîtrise et qui me permet de rendre mes sites plus dynamiques.",
+    "infos": "J'ai des connaissances solides avec le DOM et bien-sûr une expertise sur la programmation globale (surtout acquise grâce au C#...) et le tout en étant à l'aise avec les requêtes web."
+  },
+  {
+    "id": "mysql",
+    "name": "Langage : MySQL",
+    "description": "Le langage MySQL, m'a été énormément utile pour la gestion de mes bases de données pour principalement de multiples bots discord que j'ai pu créer, mais aussi pour mes blogs. Je n'ai eu aucune difficulté le concernant et je pense pouvoir dire que je le maîtrise.",
+    "infos": "J'ai de fortes connaissances sur les requêtes possibles ainsi que sur la mise en place des relations et contraintes entre les bases de données."
+  },
+  {
+    "id": "unity",
+    "name": "Moteur : Unity",
+    "description": "Unity est un moteur de jeu que j'utilise énormément, j'ai de solide connaissance me permettant de réaliser des projets de tout genre, tout en restant à jour sur les nouvelles technologies.",
+    "infos": "Que ce soit pour créer un mesh procédural ou une interface utilisateur en runtime (avec ou sans UIToolkit) ou créer tout un système indépendant en utilisant efficacement les assemblies refs, je reste très à l'aise sur son utilisation."
+  },
+  {
+    "id": "silk",
+    "name": "Framework : Silk.Net",
+    "description": "Un framework que j'utilise pour le développement d'application de très bas niveau, me permettant de découvrir un nouveau style de développement plus complexe, mais offrant une expérience inestimable. Ca me permet de réellement développer quelques choses, plutôt que d'utiliser bêtement ce que l'on me donne.",
+    "infos": "Je développe principalement un moteur de jeu 2D nommé XYEngine avec Silk.Net."
+  },
+  {
+    "id": "jetbrains",
+    "name": "IDE : Jetbrains",
+    "description": "Si j'utilise un IDE particulier il fait parti de la famille Jetbrains, ce sont des IDE professionnels me permettant de créer des projets encore meilleur en utilisant des outils puissants et la pointe de la technologie.",
+    "infos": "J'utilise principalement et presque exclusivement Rider. Très à l'aise avec le débogage et différent outils d'analyses et de profilages."
+  },
+  {
+    "id": "discord",
+    "name": "Logiciel : Discord",
+    "description": "J'utilise discord pour discuter avec mes amies, mais aussi pour m'amuser avec une API qui me permet de créer de superbes bot que j'écris entièrement en C# et qui communique efficacement avec une base de données pour de milliers d'utilisateurs.",
+    "infos": "J'ai réalisé beaucoup de bots de tous genres pour différents serveurs, ce qui me donne une bonne connaissance de tout ce qui compose l'API de Discord. De plus, je développe actuellement un bot pour mon propre serveur fournissant diverses fonctionnalités."
+  },
+  {
+    "id": "aseprite",
+    "name": "Logiciel : Aseprite",
+    "description": "Mes projets sont pratiquement tous dans un style Pixel Art, c'est un style que j'apprécie et qui est pour moi assez simple à prendre en main. Et comme le style Pixel Art est aussi souvent lié aux projets indépendants ça permet au premier coup d'oeil de savoir à quoi nous avons affaire.",
+    "infos": "Je l'utilise très souvent, ce qui fait que mes derniers projets ont tous ce style si particulier !"
+  }
+]

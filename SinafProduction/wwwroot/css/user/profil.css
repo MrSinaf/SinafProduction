@@ -1,0 +1,13 @@
+﻿header {
+    height: 300px;
+    margin: 20px;
+}
+
+header h1 {
+    display: inline;
+    font-size: 60px;
+}
+
+header img {
+    border-radius: 15px;
+}

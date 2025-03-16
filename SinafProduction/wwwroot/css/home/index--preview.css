@@ -1,0 +1,10 @@
+:not(.presentation) > nav {
+    position: fixed;
+    top: initial;
+    bottom: 0;
+    transition: transform .5s;
+}
+
+:not(.presentation) > footer {
+    display: none;
+}

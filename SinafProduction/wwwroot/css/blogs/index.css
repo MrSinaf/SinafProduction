@@ -1,0 +1,119 @@
+﻿@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+div > a:any-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.blog__vignette {
+    opacity: 0;
+    display: flex;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    transition: scale .3s ease-out;
+    animation: fadeIn 1.5s forwards;
+}
+
+.blog__vignette:hover {
+    scale: 1.1;
+}
+
+.blog__vignette img {
+    background: var(--background-color);
+    border-radius: 10px;
+    margin-right: 15px;
+    width: 150px;
+    height: 150px;
+}
+
+.blog__content > * {
+    margin: 0;
+}
+
+.blog__infos {
+    font-size: 15px;
+    margin: 0 0 0 30px;
+}
+
+.blog__vignette span {
+    color: var(--primary-color);
+}
+
+.blog__infos time {
+    color: var(--secondary-color);
+}
+
+.blog__vignette h3 {
+    rotate: 0deg;
+    margin: 4px 0;
+    line-height: 25px;
+}
+
+nav.pagination {
+    background: none;
+    margin-bottom: 15px;
+}
+
+nav.pagination li {
+    margin: 0 2px;
+}
+
+nav.pagination .button {
+    text-decoration: 0;
+}
+
+form input {
+    width: 100%;
+}
+
+@media (max-width: 950px) {
+    .blog__vignette {
+        height: auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .blog__vignette:hover {
+        scale: 1;
+    }
+
+    .blog__vignette h3 {
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .blog__vignette {
+        flex-direction: column;
+    }
+
+    .blog__vignette img, .blog__vignette time {
+        margin: auto;
+    }
+}

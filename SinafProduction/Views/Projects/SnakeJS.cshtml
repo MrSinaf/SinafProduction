@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Snake JS";
+    Layout = "_Layout";
+}
+
+<header>
+    <p class="alert alert--danger">Cette page, n'est pour le moment pas du tout adapté pour les petits écrans !</p>
+    <h1>Snake</h1>
+    <p>
+        Durant une formation pour le développement web, on devait créer un petit jeu Snake en utilisant JavaScript.<br/>
+        Ayant pris énormément d'avance comparée à mes camarades ; j'ai dû relever le défi de mon professeur qui était de faire que le jeu se joue tout seul.
+    </p>
+    <p>
+        Mais comme j'avais déjà énormément d'expérience dans le jeu vidéo et même sur le pathfinding A*, que j'ai pu l'ajouter facilement au développement et ainsi
+        relever le défi !
+    </p>
+</header>
+<main>
+    <div id="control">
+        <label class="checkbox-label" for="auto">
+            Mode auto
+            <input id="auto" type="checkbox" onclick="ActiveAuto()"/>
+        </label>
+        <button onclick="launch()">Commencer</button>
+    </div>
+    <p id="debug"></p>
+    <p id="debug2"></p>
+    <div id="terrain">
+        <p id="overlay"></p>
+        <div id="snake"></div>
+        <div id="apple"></div>
+    </div>
+    <p id="infos"></p>
+</main>
+
+@section Scripts
+{
+    <script src="/js/snake/script.js" asp-append-version="true"></script>
+    <script src="/js/snake/pathfinding.js" asp-append-version="true"></script>
+}

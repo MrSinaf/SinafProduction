@@ -1,0 +1,38 @@
+﻿@using Markdig
+@using SinafProduction.Services
+@model SinafProduction.Data.Entities.Blog
+
+@{
+    ViewBag.Title = $"{Model.title} > Blog";
+    Layout = "_Layout";
+}
+
+@section Head
+
+{
+    <link href="/libs/prism/style.css" rel="stylesheet" asp-append-version="true"/>
+}
+
+<header>
+    <h1>@Model.title</h1>
+    <img src="/blogs/@Model.id/icon.png" onerror="this.src = '/images/no_image.png'" alt="icône du blog @Model.title"/>
+</header>
+<main>
+    <p>@Model.author.username, le
+        <time datetime="@Model.createdAt?.ToString("yyyy-MM-ddTHH:mm:ssZ")">@(Model.createdAt?.ToString("dd/MM/yyyy") ?? "(brouillon)")</time>
+    </p>
+    <section id="content">
+        @Html.Raw(Markdown.ToHtml(Model.content!, new MarkdownPipelineBuilder().UseAdvancedExtensions().Build()))
+    </section>
+    <p> ❤️ Merci pour votre lecture ❤️ </p>
+    @if (User.IsAdmin())
+    {
+        <a class="button" id="edit-button" asp-action="Edit" asp-route-id=@Model.id>modifier</a>
+    }
+</main>
+
+@section Scripts
+{
+    <script src="/libs/prism/script.js" asp-append-version="true"></script>
+    <script src="/js/imagePopup.js" asp-append-version="true"></script>
+}
