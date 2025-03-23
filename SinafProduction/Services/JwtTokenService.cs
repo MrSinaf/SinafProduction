@@ -22,8 +22,6 @@ public class JwtTokenService(string secretKey, string issuer, string audience)
 				new Claim("version", user.version.ToString())
 			]),
 			Expires = DateTime.UtcNow.AddDays(2),
-			Issuer = issuer,
-			Audience = audience,
 			SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
 		};
 		

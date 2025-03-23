@@ -57,7 +57,9 @@ public class LoginController(JwtTokenService jwtService) : Controller
 		await context.Database.ExecuteSqlRawAsync("INSERT INTO login_attempts (ip, username, success) VALUES ({0}, {1}, {2});", ip ?? "0.0.0.404", model.username, success);
 		
 		if (success)
-			return model.returnUrl == null ? RedirectToAction("Index", "User") : Redirect(model.returnUrl);
+			return Redirect("https://panel.sinafproduction.xyz");
+			// TODO > Remettre la redirection vers le returnURL
+			// return model.returnUrl == null ? Redirect("https://panel.sinafproduction.xyz") : Redirect(model.returnUrl);
 		
 		ModelState.AddModelError(string.Empty, authorised ? "Nom d'utilisateur ou mot de passe incorrect." : "Vous avez effectué trop de tentatives, veuillez réessayer plus tard !");
 		

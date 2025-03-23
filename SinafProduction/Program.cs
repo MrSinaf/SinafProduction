@@ -54,12 +54,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 			
 			options.TokenValidationParameters = new TokenValidationParameters
 			{
-				ValidateIssuer = true,
-				ValidateAudience = true,
 				ValidateLifetime = true,
 				ValidateIssuerSigningKey = true,
-				ValidIssuer = "https://sinafproduction.xyz/",
-				ValidAudience = "https://sinafproduction.xyz/",
+				ValidateAudience = false,
+				ValidateIssuer = false,
 				IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
 			};
 		});
