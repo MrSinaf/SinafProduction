@@ -1,0 +1,13 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=WWWROOT_005CAUTH/@EntryIndexedValue">wwwroot\auth</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=WWWROOT_005CLOGOUT/@EntryIndexedValue">wwwroot\logout</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=WWWROOT_005CSINAFPRODUCTION_002ESTYLES_002ECSS/@EntryIndexedValue">wwwroot\SinafProduction.styles.css</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=WWWROOT_005C_005FFRAMEWORK_005CBLAZOR_002EWEB_002EJS/@EntryIndexedValue">wwwroot\_framework\blazor.web.js</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/MappedPaths/=WWWROOT_005CLOGIN/@EntryIndexedValue"></s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=WWWROOT_005CAUTH/@EntryIndexedValue">wwwroot\auth</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=WWWROOT_005CLOGIN/@EntryIndexedValue">wwwroot\Login</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=WWWROOT_005CLOGOUT/@EntryIndexedValue">wwwroot\logout</s:String>
+	
+	
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=WWWROOT_005CSINAFPRODUCTION_002ESTYLES_002ECSS/@EntryIndexedValue">wwwroot\SinafProduction.styles.css</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=WWWROOT_005C_005FFRAMEWORK_005CBLAZOR_002EWEB_002EJS/@EntryIndexedValue">wwwroot\_framework\blazor.web.js</s:String></wpf:ResourceDictionary>

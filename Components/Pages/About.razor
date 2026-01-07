@@ -1,0 +1,51 @@
+﻿@page "/about"
+
+<PageTitle>A propos</PageTitle>
+
+<main>
+    <h1>A propos</h1>
+
+    <section id="me">
+        <img src="images/shy.gif" alt="illustration de Mickaël Dancoisne"/>
+        <div>
+            <div>
+                <h2>Salutations !</h2>
+                <p>Je suis Mickaël Dancoisne, @((DateTime.Now - new DateTime(2001, 04, 25)).Days / 365) ans, développeur
+                    passionné en Rust et C# .Net.</p>
+                <p>Ce site est à la fois ma vitrine professionnelle et mon laboratoire personnel. Vous y découvrirez mes
+                    projets, mes blogs, mes expériences et peut-être quelques
+                    astuces que j'ai pu glaner au fil du temps. N'hésitez pas à me contacter pour échanger ou collaborer
+                    sur des projets !</p>
+            </div>
+            <div>
+                <a href="https://discord.gg/g6VCAuSMAq" target="_blank"><img src="images/icon/discord.png"
+                                                                             alt="icône de discord"/></a>
+                <a href="https://github.com/MrSinaf" target="_blank"><img src="images/icon/github.png"
+                                                                          alt="icône de github"/></a>
+            </div>
+        </div>
+    </section>
+    <hr/>
+    <section id="description">
+        <img src="images/mrsinaf.gif" alt="mrsinaf en pixel art"/>
+        <p>
+            Ce site web a été entièrement développé avec Blazor en .NET10 et C#14 par Mickaël Dancoisne.<br/>
+            Il est open-source et disponible sur 
+            <a href="https://github.com/MrSinaf/SinafProduction" target="_blank">
+                GitHub
+            </a>.
+        </p>
+    </section>
+    <hr/>
+    <p style="color:red; text-align: center; font-size: 2rem;">Le site est toujours en travaux, merci pour votre
+        patience !</p>
+    <p style="text-align: center;">
+        Ce site web est une v2 d'un premier site en MVC (terminé et stable) qui a été entièrement refais de zéro. C'est
+        pour cela qu'il parait brouillon.<br/>
+        J'ai décidé de quand même mettre cette version, pour me forcer à y travailler...
+    </p>
+</main>
+
+@code {
+
+}

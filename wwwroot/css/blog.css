@@ -1,0 +1,19 @@
+.blog h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.blog h2 {
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.blog p {
+    margin: 5px 5px 20px 5px;
+}
+
+.blog img {
+    max-width: 100%;
+    height: auto;
+    margin: 8px;
+}

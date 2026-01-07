@@ -1,0 +1,77 @@
+﻿main {
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#me {
+    position: relative;
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#me > img {
+    height: 300px;
+    position: relative;
+    bottom: 0;
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+#me > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+#me > div > div:last-of-type {
+    margin-left: auto;
+}
+
+#me a > img {
+    width: 64px;
+    image-rendering: pixelated;
+    border-radius: 10px;
+    transition: transform 0.1s;
+}
+
+#me a > img:hover {
+    transform: translateY(-5px);
+}
+
+hr {
+    margin: 50px auto;
+}
+
+#description {
+    text-align: center;
+    align-items: center;
+}
+
+#description > img {
+    margin-left: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+#description > p {
+    text-align: center;
+}
+
+@media (max-width: 550px) {
+
+    #me > img {
+        position: absolute;
+        z-index: -1;
+        opacity: 0.1;
+    }
+    
+    #me > div {
+        margin-left: 0;
+    }
+    
+}

@@ -1,0 +1,82 @@
+﻿@implements IDisposable
+@using SinafProduction.Services
+@inherits LayoutComponentBase
+@inject LoadingService Loading
+@inject NavigationManager Nav
+
+<header>
+    <nav>
+        <p>SINAF PRODUCTION</p>
+        <div @onclick="OnMenuBurgerClick">
+            <img src="images/icon/menu_hamburger.png" alt="Menu"/>
+        </div>
+        <ul class="@(showBurgerMenu ? "show" : string.Empty)">
+            <li class="nav-link">
+                <NavLink href="/" ActiveClass="nav-link--active" Match="NavLinkMatch.All">Présentation</NavLink>
+            </li>
+            <li class="nav-link">
+                <NavLink href="/projects" ActiveClass="nav-link--active">Projets</NavLink>
+            </li>
+            <li class="nav-link">
+                <NavLink href="/blogs" ActiveClass="nav-link--active">Blogs</NavLink>
+            </li>
+            <li class="nav-link">
+                <NavLink href="/about" ActiveClass="nav-link--active">A propos</NavLink>
+            </li>
+            <AuthorizeView>
+                <Authorized>
+                    <li class="nav-link--logout">
+                        <a href="/logout" >Déconnexion</a>
+                    </li>
+                </Authorized>
+            </AuthorizeView>
+        </ul>
+    </nav>
+</header>
+
+@if (Loading.IsLoading)
+{
+    <div class="loading">
+        <div></div>
+    </div>
+}
+
+@Body
+
+<footer>
+    <p>©SinafProduction - @(DateTime.Now.Year)</p>
+    <p>v-dev</p>
+</footer>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+<div id="components-reconnect-modal" class="components-reconnect">
+    <h1>Impossible de continuer</h1>
+    <p>Tentative de reconnection vers le serveur...</p>
+</div>
+
+@code {
+    private bool showBurgerMenu;
+
+    protected override void OnInitialized()
+    {
+        Loading.onChange += LoadStateChanged;
+        Nav.LocationChanged += HandleLocationChanged;
+    }
+
+    private void LoadStateChanged() => InvokeAsync(StateHasChanged);
+
+    private void HandleLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        showBurgerMenu = false;
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void OnMenuBurgerClick() => showBurgerMenu = !showBurgerMenu;
+
+    public void Dispose() => Loading.onChange -= StateHasChanged;
+}
