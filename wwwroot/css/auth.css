@@ -1,0 +1,49 @@
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.2);
+    width: 75%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form > h1 {
+    text-align: center;
+}
+
+form > input {
+    margin: 3px auto;
+    width: 90%;
+}
+
+form > button {
+    margin: 10px auto 0 auto;
+    width: 200px;
+}
+
+a {
+    margin-top: 10px;
+}
+
+#oups {
+    position: absolute;
+    z-index: -1;
+    margin-right: 580px;
+}
+
+#oups p {
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 270px;
+    width: 600px;
+    transform: rotate(5deg);
+}

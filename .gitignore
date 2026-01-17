@@ -1,0 +1,13 @@
+.idea/
+.vs/
+
+[Bb]in/
+[Oo]bj/
+
+# Données mutables
+/wwwroot/blogs/
+/wwwroot/projects/
+
+# Données sensibles
+appsettings.Development.json
+Properties/launchSettings.json

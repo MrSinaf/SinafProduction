@@ -1,0 +1,40 @@
+@model SinafProduction.Models.AuthLoginModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <base href="/"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/auth.css"/>
+    <title>Sinaf Production</title>
+</head>
+<body>
+<main>
+    <form method="post">
+        <h1>Connexion</h1>
+        @Html.AntiForgeryToken()
+        @if (Model.ReturnUrl != null)
+        {
+            <input type="hidden" name="returnUrl" value="@Model.ReturnUrl"/>
+        }
+        <input type="text" id="username" name="username" class="form-control" value="@Model.Username"
+               placeholder="Nom d'utilisateur" required/>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe" required/>
+        <div asp-validation-summary="ModelOnly" class="validation-message"></div>
+        <button type="submit">Se connecter</button>
+    </form>
+    @* Pas encore de dessin ;-; *@
+    @* <div id="oups"> *@
+    @*     <p>Hey~ désolé mais ici c'est privé :3</p> *@
+    @*     <img src="images/oups.png" alt="oups image"/> *@
+    @* </div> *@
+    <a href="/">Revenir sur le site</a>
+</main>
+</body>
+</html>

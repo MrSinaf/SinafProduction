@@ -1,0 +1,7 @@
+.markdown h1 {
+    color: var(--accent-color);
+}
+
+.markdown p {
+    margin: 15px 10px;
+}

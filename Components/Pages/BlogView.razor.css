@@ -1,0 +1,55 @@
+main {
+    padding: 0 20px;
+}
+
+main > p {
+    text-align: center;
+}
+
+#header {
+    display: flex;
+    background: var(--background-color);
+    max-width: 1250px;
+    margin: 20px auto 0 auto;
+}
+
+#header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-wrap: wrap;
+    word-wrap: anywhere;
+}
+
+#header p {
+    font-size: 0.9em;
+    color: var(--text-color-secondary);
+    margin: 0 0 0 20px;
+}
+
+#header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-left: auto;
+}
+
+.blog {
+    background: var(--background-color-tertiary);
+    padding: 20px;
+    max-width: 1000px;
+    margin: 10px auto 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+@media (max-width: 450px) {
+    #header {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    #header img {
+        margin: 5px auto;
+    }
+}

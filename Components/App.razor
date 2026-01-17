@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <base href="/"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="css/app.css?v=1"/>
+    <link rel="stylesheet" href="SinafProduction.styles.css?v=1"/>
+    <HeadOutlet @rendermode="new InteractiveServerRenderMode(prerender: false)"/>
+    <title>SP</title>
+</head>
+
+<body>
+<CascadingAuthenticationState>
+    <Routes @rendermode="new InteractiveServerRenderMode(prerender: false)"/>
+</CascadingAuthenticationState>
+<script src="js/app.js"></script>
+<script src="_framework/blazor.web.js"></script>
+</body>
+
+</html>

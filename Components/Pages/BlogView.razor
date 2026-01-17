@@ -1,0 +1,25 @@
+@page "/blog/{Id}"
+@using Markdig
+@using SinafProduction.Services
+@inject LoadingService Loading
+
+<HeadContent>
+    <link rel="stylesheet" href="/css/blog.css"/>
+</HeadContent>
+
+<main style="@Loading.GetStyle()">
+    @if (blog != null)
+    {
+        <div id="header">
+            <div>
+                <h1>@blog.Title</h1>
+                <p>par @blog.Author.Name - le @blog.PublishAt</p>
+            </div>
+            <img src="blogs/@blog.Id/icon.png" alt="icône du blog"/>
+        </div>
+        <div class="blog">
+            @((MarkupString)Markdown.ToHtml(blog.Content, new MarkdownPipelineBuilder().UseAdvancedExtensions().Build()))
+        </div>
+        <p>Merci pour votre lecture &lt;3️</p> 
+    }
+</main>

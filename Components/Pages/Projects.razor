@@ -1,0 +1,30 @@
+﻿@page "/projects"
+@using SinafProduction.Services
+@inject LoadingService Loading
+
+<PageTitle>Projets</PageTitle>
+
+<main style="@Loading.GetStyle()">
+    <h1>Mes projets</h1>
+    <div id="projects">
+        @if (projects != null)
+        {
+            foreach (var project in projects)
+            {
+                <div class="project">
+                    <a href="/project/@project.UniqueName">
+                        <img src="projects/@project.UniqueName/icon.png" alt="Logo de @project.UniqueName"/>
+                        <h2>@project.Name</h2>
+                        <div class="project__description">
+                            <p>@project.Tag.Name</p>
+                        </div>
+                    </a>
+                </div>
+            }
+        }
+    </div>
+    <div id="end">
+        <img src="images/sinaf_lookup.png" alt="Sinaf lookup"/>
+        <p>Et voilà il n'y a rien d'autre...</p>
+    </div>
+</main>

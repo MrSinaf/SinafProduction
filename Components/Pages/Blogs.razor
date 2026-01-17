@@ -1,0 +1,38 @@
+@page "/Blogs"
+@using SinafProduction.Services
+@inject LoadingService Loading
+
+<PageTitle>Blogs</PageTitle>
+
+<main style="@Loading.GetStyle()">
+    <h1>Blogs</h1>
+
+    <div id="header">
+        <img src="images/poney_walk.png" alt="Poney walk"/>
+        <input type="text" placeholder="Rechercher par nom" @bind="Search" @bind:event="oninput"/>
+    </div>
+    <ul class="no-style">
+        @if (blogs != null)
+        {
+            @foreach (var blog in blogs)
+            {
+                <li>
+                    <a class="blog no-style" href="/blog/@blog.Id">
+                        <div class="blog__thumbnail">
+                            <img src="blogs/@blog.Id/icon.png" alt="Icône du blog"/>
+                        </div>
+                        <div class="blog__infos">
+                            <div>
+                                <h3>@blog.Title</h3>
+                                <p>@blog.Description</p>
+                            </div>
+                            <div class="blog__buttons">
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            }
+        }
+    </ul>
+</main>

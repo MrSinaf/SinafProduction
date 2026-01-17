@@ -1,0 +1,93 @@
+﻿@page "/"
+@using SinafProduction.Components.Layout
+@layout MainLayout
+
+<PageTitle>Accueil</PageTitle>
+
+<main>
+    <div id="main">
+        <h1>Mickaël Dancoisne</h1>
+        <p>Votre femboy développeur en C# & Rust</p>
+    </div>
+    <div id="snake-logo"></div>
+    @if (projectStars != null && lastRepository != null)
+    {
+        <section id="projects">
+            <h2>Mes projets notables</h2>
+            <div id="projects__list">
+                @foreach (var star in projectStars)
+                {
+                    <a class="project" href="/project/@star.Project.UniqueName">
+                        <h3>@star.Project.Name</h3>
+                        <img src="/projects/@star.Project.UniqueName/icon.png" alt="Icon du projet @star.Project.Name"/>
+                    </a>
+                }
+            </div>
+        </section>
+        <section id="github">
+            <h2>Dernier push sur Github╰(*°▽°*)╯</h2>
+            <div id="commit">
+                <div>
+                    <div>
+                        <h3 id="commit__repo">@lastRepository.Repository</h3>
+                    </div>
+                    <p id="commit__content"><span
+                            id="commit__branch">@lastRepository.Branch</span> @lastRepository.Commit</p>
+                    <div id="commit__buttons">
+                        <a class="button" href="/project/@lastRepository.Project.UniqueName">Projet</a>
+                        <a class="button"
+                           href="https://github.com/MrSinaf/@lastRepository.Repository/tree/@lastRepository.Branch"
+                           target="_blank">Github</a>
+                        @if (lastRepository.Added > 0)
+                        {
+                            <span id="commit--added">+@lastRepository.Added.ToString("N0")</span>
+                        }
+                        @if (lastRepository.Removed > 0)
+                        {
+                            <span id="commit--removed">-@lastRepository.Removed.ToString("N0")</span>
+                        }
+                        @if (lastRepository.Modified > 0)
+                        {
+                            <span id="commit--modified">#@lastRepository.Modified.ToString("N0")</span>
+                        }
+                    </div>
+                </div>
+                <div id="commit__avatar">
+                    <img src="images/github_avatar.png" alt="Avatar Github"/>
+                </div>
+            </div>
+        </section>
+    }
+    @if (lastBlogs != null)
+    {
+        <section id="blogs">
+            <h2>Mes derniers blogs</h2>
+            <div>
+                @foreach (var blog in lastBlogs)
+                {
+                    <a class="blog" href="/blog/@blog.Id">
+                        <div class="blog__thumbnail">
+                            <img src="blogs/@blog.Id/icon.png" alt="Icône du blog"/>
+                        </div>
+                        <div class="blog__infos">
+                            <div>
+                                <h3>@blog.Title</h3>
+                                <p>@blog.Description</p>
+                            </div>
+                            <div class="blog__buttons">
+
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
+        </section>
+    }
+
+    @if (!isLoaded)
+    {
+        <div class="loading">
+            <div></div>
+        </div>
+    }
+</main>

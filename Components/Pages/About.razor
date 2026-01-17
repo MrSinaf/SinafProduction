@@ -1,0 +1,46 @@
+﻿@page "/about"
+
+<PageTitle>A propos</PageTitle>
+
+<main>
+    <h1>A propos</h1>
+
+    <section id="me">
+        <img src="images/shy.gif" alt="illustration de Mickaël Dancoisne"/>
+        <div>
+            <div>
+                <h2>Salutations !</h2>
+                <p>
+                    Je suis Mickaël Dancoisne, @((DateTime.Now - new DateTime(2001, 04, 25)).Days / 365) ans, 
+                    développeur passionné en Rust et C# .Net.
+                </p>
+                <p>
+                    Ce site est à la fois ma vitrine professionnelle et mon donjon personnel. Vous y découvrirez
+                    mes projets, mes blogs, mes expériences et peut-être quelques une de mes perversions.
+                </p>
+            </div>
+            <div>
+                <a href="https://discord.gg/g6VCAuSMAq" target="_blank">
+                    <img src="images/icon/discord.png" alt="icône de discord"/>
+                </a>
+                <a href="https://github.com/MrSinaf" target="_blank">
+                    <img src="images/icon/github.png" alt="icône de github"/>
+                </a>
+            </div>
+        </div>
+    </section>
+    <hr/>
+    <section id="description">
+        <img src="images/mrsinaf.gif" alt="mrsinaf en pixel art"/>
+        <p>
+            Ce site web a été entièrement développé avec Blazor en .NET10 et C#14 par Mickaël Dancoisne.<br/>
+            Il est open-source et disponible sur
+            <a href="https://github.com/MrSinaf/SinafProduction" target="_blank">GitHub</a>.
+        </p>
+    </section>
+    <hr/>
+</main>
+
+@code {
+
+}
